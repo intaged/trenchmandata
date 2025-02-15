@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-primary text-text-primary;
+    font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv03" on;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-light;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card-bg backdrop-blur-md border border-border-color rounded-xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-primary text-transparent bg-clip-text;
+  }
+
+  .hover-card {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-1;
+  }
+}
+
+/* Premium animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Glass morphism effects */
+.glass {
+  background: rgba(30, 41, 59, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient borders */
+.gradient-border {
+  position: relative;
+  border-radius: 0.75rem;
+  background: linear-gradient(to right, #3B82F6, #60A5FA);
+  padding: 1px;
+}
+
+.gradient-border > * {
+  background: #0F172A;
+  border-radius: 0.75rem;
+} 
