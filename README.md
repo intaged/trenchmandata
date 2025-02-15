@@ -1,5 +1,7 @@
 # DataTrench - Solana Analytics Platform
 
+[![Deploy to GitHub Pages](https://github.com/intaged/trenchmandata/actions/workflows/deploy.yml/badge.svg)](https://github.com/intaged/trenchmandata/actions/workflows/deploy.yml)
+
 DataTrench is a sophisticated analytics platform for the Solana ecosystem, offering real-time tracking of tokens, wallets, and market trends with a premium user experience.
 
 ## Features
