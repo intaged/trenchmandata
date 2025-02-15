@@ -4,6 +4,7 @@ const nextConfig = {
   output: 'export',  // Enable static exports
   basePath: '/trenchmandata', // Add your repository name
   images: {
+    unoptimized: true,
     domains: [
       'data.solanatracker.io',
       'raw.githubusercontent.com',
@@ -17,7 +18,6 @@ const nextConfig = {
       'static.solanatracker.io',
       'cdn.solanatracker.io',
     ],
-    unoptimized: true,
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
