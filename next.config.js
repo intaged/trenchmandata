@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',  // Enable static exports
+  basePath: '/trenchmandata', // Add your repository name
   images: {
     domains: [
       'data.solanatracker.io',
